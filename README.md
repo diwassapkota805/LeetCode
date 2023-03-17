@@ -31,3 +31,18 @@ public int romanToInt(String s) {
     
     return result;
 }
+```
+## Palandrome Number
+```Java
+class Solution {
+    public boolean isPalindrome(int x) {
+        StringBuilder str = new StringBuilder(String.valueOf(x));
+        System.out.println(str);
+
+        //str.reverse() permaently changes the order of the characers
+        if(String.valueOf(str.reverse()).equals(String.valueOf(x)))
+            return true;
+        return false;
+    }
+}
+```
