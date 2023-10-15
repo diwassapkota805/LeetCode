@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isHappy(int n) {
+        Set<Integer> seen = new HashSet<>(); // use a set to keep track of seen numbers
+        while (n != 1) {
+            seen.add(n);
+            int output = 0;
+            String number = Integer.toString(n);
+
+            for (int i = 0; i < number.length(); i++) {
+                int digit = number.charAt(i) - '0';
+                output += digit * digit;
+            }
+
+            n = output;
+            if (seen.contains(n))
+                return false;
+        }
+        return true;
+    }
+}
+// 202
+// logic
